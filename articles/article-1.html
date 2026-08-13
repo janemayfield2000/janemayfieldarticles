@@ -1,29 +1,312 @@
-<article>
-  <h1>Treat Directory Submissions Like a Project, Not a To-Do List Item</h1>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <img src="https://jpcdn.it/img/small/25335e1f19b2e0f0540a40a461db6f1a.png" alt="Directory submissions project management">
+    <title>Treat Directory Submissions Like a Project, Not a To-Do List Item</title>
 
-  <p>Founders often approach directory submissions the same way they approach a quick errand — knock it out in an afternoon, move on, forget about it. That mindset tends to produce sloppy, inconsistent results across platforms, because directory work actually behaves more like an ongoing project than a one-time task.</p>
+    <meta name="description" content="Why founders should treat directory submissions as an ongoing project rather than a one-time task.">
 
-  <p>The core problem with the errand mindset is that it skips tracking. Without a record of which platforms you've submitted to, which login credentials you used, and what description you wrote where, founders quickly lose the ability to manage their own footprint. Six months later, updating a company description or fixing a broken link becomes a scavenger hunt instead of a five-minute task, simply because there's no central record of what exists.</p>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-  <p>A simple system solves most of this. A spreadsheet with columns for platform name, submission date, account email, live URL, and last-updated date takes minutes to set up and saves hours of confusion later. This is especially important for founders working across multiple products or brands, where it's easy to lose track of which listing belongs to which company without a clear system in place.</p>
+        html {
+            scroll-behavior: smooth;
+        }
 
-  <p>Treating this as a project also means thinking about cadence rather than a single burst of effort. Rather than submitting to every relevant platform in one exhausting week, spacing submissions into planned waves — tied to launch milestones, feature releases, or quarterly check-ins — tends to produce more consistent, higher-quality listings than a single rushed sprint.</p>
+        body {
+            margin: 0;
+            background: #f6f7f9;
+            color: #24262b;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+        }
 
-  <p>This project mindset pays off most clearly when something changes — a rebrand, a pivot, a new URL structure. Founders with a tracked system can update every relevant listing methodically; founders without one often just let outdated information sit indefinitely, quietly undermining the credibility those listings were supposed to build in the first place.</p>
+        /* Header */
 
-  <p>For founders setting up this kind of system for the first time, this curated list of startup directories is a practical starting point for building the initial tracking sheet before submissions begin.</p>
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e8e8;
+        }
 
-  <p>
-    <a href="https://listingbott.com/" rel="nofollow">Startup directories</a>
-  </p>
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 22px 20px;
+        }
 
-  <p>
-    <a href="https://listingbott.com/blog/hr-software-listing-services-2026">#StartupOps</a>
-    <a href="#">#DirectorySubmission</a>
-    <a href="#">#FounderProductivity</a>
-    <a href="#">#StartupSEO</a>
-    <a href="#">#ProjectManagement</a>
-  </p>
-</article>
+        .logo {
+            color: #111318;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        /* Article */
+
+        .article-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+        }
+
+        article {
+            background: #ffffff;
+            padding: 60px 70px;
+            border-radius: 16px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        article h1 {
+            margin: 0 0 32px;
+            color: #111318;
+            font-size: 46px;
+            line-height: 1.12;
+            letter-spacing: -1.3px;
+            font-weight: 750;
+        }
+
+        article > img {
+            display: block;
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+            margin: 0 0 40px;
+            border-radius: 12px;
+        }
+
+        article p {
+            margin: 0 0 26px;
+            color: #454951;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        article p:first-of-type {
+            color: #30333a;
+            font-size: 20px;
+        }
+
+        article a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        /* Source link */
+
+        .source {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .source a {
+            display: inline-block;
+            padding: 10px 17px;
+            border-radius: 8px;
+            background: #f0f4ff;
+            color: #315dcc;
+            font-weight: 600;
+        }
+
+        .source a:hover {
+            background: #e5ebff;
+            text-decoration: none;
+        }
+
+        /* Tags */
+
+        .tags {
+            margin-top: 25px;
+        }
+
+        .tags a {
+            display: inline-block;
+            margin: 0 7px 8px 0;
+            padding: 7px 13px;
+            border-radius: 20px;
+            background: #f1f2f4;
+            color: #60646c;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tags a:hover {
+            background: #e6e7ea;
+            color: #22252a;
+            text-decoration: none;
+        }
+
+        /* Footer */
+
+        footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px 50px;
+            color: #888;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .article-page {
+                padding: 25px 12px 50px;
+            }
+
+            article {
+                padding: 35px 25px;
+                border-radius: 12px;
+            }
+
+            article h1 {
+                font-size: 34px;
+                letter-spacing: -0.7px;
+            }
+
+            article > img {
+                margin-bottom: 30px;
+                border-radius: 9px;
+            }
+
+            article p {
+                font-size: 17px;
+                line-height: 1.7;
+            }
+
+            article p:first-of-type {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .header-inner {
+                padding: 18px 15px;
+            }
+
+            .article-page {
+                padding: 15px 8px 40px;
+            }
+
+            article {
+                padding: 28px 20px;
+            }
+
+            article h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">My Blog</a>
+    </div>
+</header>
+
+<main class="article-page">
+
+    <article>
+
+        <h1>Treat Directory Submissions Like a Project, Not a To-Do List Item</h1>
+
+        <img
+            src="https://jpcdn.it/img/small/25335e1f19b2e0f0540a40a461db6f1a.png"
+            alt="Directory submissions project management"
+        >
+
+        <p>
+            Founders often approach directory submissions the same way they
+            approach a quick errand — knock it out in an afternoon, move on,
+            forget about it. That mindset tends to produce sloppy, inconsistent
+            results across platforms, because directory work actually behaves
+            more like an ongoing project than a one-time task.
+        </p>
+
+        <p>
+            The core problem with the errand mindset is that it skips tracking.
+            Without a record of which platforms you've submitted to, which login
+            credentials you used, and what description you wrote where, founders
+            quickly lose the ability to manage their own footprint. Six months
+            later, updating a company description or fixing a broken link becomes
+            a scavenger hunt instead of a five-minute task, simply because
+            there's no central record of what exists.
+        </p>
+
+        <p>
+            A simple system solves most of this. A spreadsheet with columns for
+            platform name, submission date, account email, live URL, and
+            last-updated date takes minutes to set up and saves hours of confusion
+            later. This is especially important for founders working across
+            multiple products or brands, where it's easy to lose track of which
+            listing belongs to which company without a clear system in place.
+        </p>
+
+        <p>
+            Treating this as a project also means thinking about cadence rather
+            than a single burst of effort. Rather than submitting to every
+            relevant platform in one exhausting week, spacing submissions into
+            planned waves — tied to launch milestones, feature releases, or
+            quarterly check-ins — tends to produce more consistent,
+            higher-quality listings than a single rushed sprint.
+        </p>
+
+        <p>
+            This project mindset pays off most clearly when something changes —
+            a rebrand, a pivot, a new URL structure. Founders with a tracked
+            system can update every relevant listing methodically; founders
+            without one often just let outdated information sit indefinitely,
+            quietly undermining the credibility those listings were supposed
+            to build in the first place.
+        </p>
+
+        <p>
+            For founders setting up this kind of system for the first time,
+            this curated list of startup directories is a practical starting
+            point for building the initial tracking sheet before submissions
+            begin.
+        </p>
+
+        <div class="source">
+            <a
+                href="https://listingbott.com/"
+                rel="nofollow"
+                target="_blank"
+            >
+                Startup directories
+            </a>
+        </div>
+
+        <div class="tags">
+            <a href="#">#StartupOps</a>
+            <a href="#">#DirectorySubmission</a>
+            <a href="#">#FounderProductivity</a>
+            <a href="#">#StartupSEO</a>
+            <a href="#">#ProjectManagement</a>
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+    © 2026 My Blog
+</footer>
+
+</body>
+</html>
+```
