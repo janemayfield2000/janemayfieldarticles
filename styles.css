@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+    line-height: 1.7;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    border-bottom: 1px solid #eeeeee;
+    padding: 25px 20px;
+    background: #ffffff;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+   Main
+========================= */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* =========================
+   Home page
+========================= */
+
+.home-title {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #111111;
+}
+
+.intro {
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 700px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.article-card {
+    padding: 25px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.article-card h2 {
+    font-size: 25px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.article-card h2 a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.article-card h2 a:hover {
+    text-decoration: underline;
+}
+
+.article-description {
+    color: #666666;
+    font-size: 16px;
+    max-width: 750px;
+    margin-bottom: 12px;
+}
+
+.read-more {
+    color: #111111;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Article page
+========================= */
+
+.article-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-page h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+.article-page .article-meta {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.article-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 6px;
+}
+
+.article-page p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    color: #333333;
+}
+
+.article-page h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 45px 0 18px;
+    color: #111111;
+}
+
+.article-page h3 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 35px 0 15px;
+    color: #111111;
+}
+
+.article-page ul,
+.article-page ol {
+    margin: 0 0 25px 25px;
+}
+
+.article-page li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.article-page a {
+    color: #111111;
+    text-decoration: underline;
+}
+
+.article-page a:hover {
+    opacity: 0.7;
+}
+
+.article-page blockquote {
+    border-left: 3px solid #222222;
+    padding-left: 20px;
+    margin: 30px 0;
+    color: #555555;
+    font-size: 19px;
+    font-style: italic;
+}
+
+.article-page code {
+    background: #f5f5f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.article-page pre {
+    background: #f5f5f5;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 6px;
+}
+
+.article-page pre code {
+    background: none;
+    padding: 0;
+}
+
+/* =========================
+   Back link
+========================= */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #666666;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #111111;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 30px 20px;
+    border-top: 1px solid #eeeeee;
+    color: #888888;
+    font-size: 14px;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 40px 20px;
+    }
+
+    .home-title {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .article-card h2 {
+        font-size: 21px;
+    }
+
+    .article-page h1 {
+        font-size: 32px;
+    }
+
+    .article-page h2 {
+        font-size: 26px;
+    }
+
+    .article-page h3 {
+        font-size: 21px;
+    }
+
+    .article-page p,
+    .article-page li {
+        font-size: 17px;
+    }
+
+    .article-page img {
+        margin: 25px 0;
+    }
+}
