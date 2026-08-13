@@ -1,0 +1,615 @@
+# BLOG ARTICLE FORMAT
+
+This file explains how to create a new article for the blog.
+
+---
+
+1. WHERE TO PUT ARTICLES
+
+---
+
+All articles must be placed inside:
+
+articles/
+
+Examples:
+
+articles/article-1.html
+articles/article-2.html
+articles/article-3.html
+articles/article-4.html
+
+The filename can remain simple:
+
+article-1.html
+article-2.html
+article-3.html
+
+The filename does NOT determine the public URL.
+
+---
+
+2. PUBLIC ARTICLE URL
+
+---
+
+The public URL is automatically generated from the <title> of the article.
+
+For example:
+
+<title>Treat Directory Submissions Like a Project, Not a To-Do List Item</title>
+
+will produce:
+
+/articles/treat-directory-submissions-like-a-project-not-a-to-do-list-item/
+
+You do NOT need to create the slug manually.
+
+---
+
+3. REQUIRED ARTICLE STRUCTURE
+
+---
+
+Every article should contain:
+
+* <!DOCTYPE html>
+* <html lang="en">
+* <head>
+* charset
+* viewport
+* <title>
+* meta description
+* link to /styles.css
+* <body>
+* site header
+* article content
+* site footer
+
+---
+
+4. ARTICLE TEMPLATE
+
+---
+
+Use this template when creating a new article:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>YOUR ARTICLE TITLE</title>
+
+<meta
+    name="description"
+    content="YOUR ARTICLE DESCRIPTION"
+>
+
+<link rel="stylesheet" href="/styles.css">
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<div class="header-inner">
+
+    <a href="/" class="logo">
+        My Blog
+    </a>
+
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<article class="article-page">
+
+    <a href="/" class="back-link">
+        ← Back to articles
+    </a>
+
+    <h1>YOUR ARTICLE TITLE</h1>
+
+    <p>
+        Your first paragraph goes here.
+    </p>
+
+    <h2>First Section</h2>
+
+    <p>
+        Your article text goes here.
+    </p>
+
+    <p>
+        More article text goes here.
+    </p>
+
+    <h2>Second Section</h2>
+
+    <p>
+        More content goes here.
+    </p>
+
+</article>
+```
+
+</main>
+
+<footer>
+
+```
+© 2026 My Blog
+```
+
+</footer>
+
+</body>
+
+</html>
+
+---
+
+5. TITLE
+
+---
+
+The <title> is very important.
+
+Example:
+
+<title>
+Treat Directory Submissions Like a Project, Not a To-Do List Item
+</title>
+
+The build script uses this title to generate the article slug.
+
+Example:
+
+Title:
+
+Treat Directory Submissions Like a Project, Not a To-Do List Item
+
+Generated URL:
+
+/articles/treat-directory-submissions-like-a-project-not-a-to-do-list-item/
+
+Do not manually write the slug.
+
+---
+
+6. META DESCRIPTION
+
+---
+
+Every article should have a unique meta description.
+
+Example:
+
+<meta
+name="description"
+content="Learn how to manage directory submissions as a structured SEO project instead of a one-time task."
+
+>
+
+Keep the description short and relevant to the article.
+
+---
+
+7. H1
+
+---
+
+The article should have one main <h1>.
+
+Example:
+
+<h1>Treat Directory Submissions Like a Project, Not a To-Do List Item</h1>
+
+The H1 should normally match the article title.
+
+---
+
+8. HEADINGS
+
+---
+
+Use headings in this order:
+
+<h1>Article title</h1>
+
+<h2>Main section</h2>
+
+<h2>Another main section</h2>
+
+<h3>Subsection</h3>
+
+Do not use multiple <h1> elements in one article.
+
+---
+
+9. PARAGRAPHS
+
+---
+
+Normal article text should be placed inside <p> tags.
+
+Example:
+
+<p>
+    Founders often approach directory submissions as a quick task.
+</p>
+
+<p>
+    A better approach is to treat the process as an ongoing project.
+</p>
+
+Do not put large blocks of normal text directly inside <article>.
+
+---
+
+10. IMAGES
+
+---
+
+Images can be added using normal HTML.
+
+Example:
+
+<img
+src="https://example.com/image.jpg"
+alt="Description of the image"
+
+>
+
+Always provide an alt attribute.
+
+The shared styles.css automatically styles article images.
+
+---
+
+11. LINKS
+
+---
+
+Use normal HTML links.
+
+Example:
+
+<a href="https://example.com">
+    Example website
+</a>
+
+Internal links can point to other articles using their generated slug.
+
+Example:
+
+<a href="/articles/my-other-article/">
+    Read my other article
+</a>
+
+---
+
+12. LISTS
+
+---
+
+Unordered list:
+
+<ul>
+
+```
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+```
+
+</ul>
+
+Ordered list:
+
+<ol>
+
+```
+<li>First step</li>
+<li>Second step</li>
+<li>Third step</li>
+```
+
+</ol>
+
+---
+
+13. BLOCKQUOTES
+
+---
+
+For quotations or highlighted statements:
+
+<blockquote>
+    Your quotation goes here.
+</blockquote>
+
+---
+
+14. CODE
+
+---
+
+Inline code:
+
+<code>example()</code>
+
+Code blocks:
+
+<pre><code>
+your code here
+</code></pre>
+
+---
+
+15. IMPORTANT: STYLES
+
+---
+
+Do NOT add a large <style>...</style> section to individual articles.
+
+All pages use the shared:
+
+/styles.css
+
+This keeps the design consistent across the entire website.
+
+Every article must contain:
+
+<link rel="stylesheet" href="/styles.css">
+
+---
+
+16. DO NOT CHANGE THE HEADER OR FOOTER
+
+---
+
+Use the standard header:
+
+<header>
+
+```
+<div class="header-inner">
+
+    <a href="/" class="logo">
+        My Blog
+    </a>
+
+</div>
+```
+
+</header>
+
+Use the standard footer:
+
+<footer>
+
+```
+© 2026 My Blog
+```
+
+</footer>
+
+---
+
+17. HOW TO ADD A NEW ARTICLE
+
+---
+
+Step 1:
+
+Create a new file:
+
+articles/article-11.html
+
+Step 2:
+
+Copy the article template from this README.
+
+Step 3:
+
+Replace:
+
+YOUR ARTICLE TITLE
+
+with the real article title.
+
+Step 4:
+
+Add a unique meta description.
+
+Step 5:
+
+Add the article content.
+
+Step 6:
+
+Commit and push the changes to Git.
+
+Example:
+
+git add .
+git commit -m "Add new article"
+git push
+
+Step 7:
+
+Vercel automatically runs the build.
+
+The build script will:
+
+1. Find the new article.
+2. Read its <title>.
+3. Generate a slug.
+4. Create the clean article URL.
+5. Add the article to the homepage.
+6. Copy the article to its generated URL directory.
+
+---
+
+18. EXAMPLE
+
+---
+
+Git filename:
+
+articles/article-11.html
+
+Title:
+
+<title>
+How SaaS Companies Can Improve Organic Visibility
+</title>
+
+Generated URL:
+
+/articles/how-saas-companies-can-improve-organic-visibility/
+
+The homepage automatically gets:
+
+How SaaS Companies Can Improve Organic Visibility
+
+Read article →
+
+You do NOT need to edit index.html.
+
+---
+
+19. IMPORTANT RULES
+
+---
+
+Always:
+
+* Put articles inside /articles/
+* Use filenames such as article-1.html
+* Include a unique <title>
+* Include a unique meta description
+* Include one <h1>
+* Include /styles.css
+* Use <h2> for main sections
+* Use <h3> for subsections
+* Use alt text for images
+* Keep the article inside <article class="article-page">
+* Commit and push to Git after adding an article
+
+Never:
+
+* Manually add articles to index.html
+* Manually create the slug
+* Add separate CSS to every article
+* Remove the shared stylesheet
+* Change the generated article folders
+* Put article files outside /articles/
+
+---
+
+20. BASIC ARTICLE TEMPLATE
+
+---
+
+For quick reference:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>ARTICLE TITLE</title>
+
+<meta
+    name="description"
+    content="ARTICLE DESCRIPTION"
+>
+
+<link rel="stylesheet" href="/styles.css">
+```
+
+</head>
+
+<body>
+
+<header>
+
+```
+<div class="header-inner">
+
+    <a href="/" class="logo">
+        My Blog
+    </a>
+
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<article class="article-page">
+
+    <a href="/" class="back-link">
+        ← Back to articles
+    </a>
+
+    <h1>ARTICLE TITLE</h1>
+
+    <p>
+        Article text.
+    </p>
+
+    <h2>Section Title</h2>
+
+    <p>
+        Article text.
+    </p>
+
+</article>
+```
+
+</main>
+
+<footer>
+
+```
+© 2026 My Blog
+```
+
+</footer>
+
+</body>
+
+</html>
+
+END OF README
