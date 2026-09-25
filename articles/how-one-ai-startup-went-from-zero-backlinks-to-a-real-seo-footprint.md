@@ -2,8 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How One AI Startup Went From Zero Backlinks to a Real SEO Footprint</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
   </head>
   <body style="background-color: #0d0d0d; margin: 0;">
 <div style="font-family: Arial, Helvetica, sans-serif; line-height: 1.7; color: #f0f0f0; background-color: #0d0d0d; max-width: 800px; margin: 0 auto; padding: 24px;">
